@@ -111,10 +111,10 @@ class Swimming(Training):
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
-        coeff_calorie_swm_1: float = 1.1
-        coeff_calorie_swm_2: int = 2
-        self.spent_calories = ((self.get_mean_speed() + coeff_calorie_swm_1)
-                               * coeff_calorie_swm_2 * self.weight)
+        COEFF_SWM_SPEED: float = 1.1
+        COEFF_SWM_WEIGHT: int = 2
+        self.spent_calories = ((self.get_mean_speed() + COEFF_SWM_SPEED)
+                               * COEFF_SWM_WEIGHT * self.weight)
         return self.spent_calories
 
 
